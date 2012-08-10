@@ -16,11 +16,9 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE    := libpng
-
 LOCAL_CFLAGS := -DPNG_NO_LIMITS_H
 
-LOCAL_C_INCLUDES := $(LOCAL_PATH)
+LOCAL_MODULE    := libpng
 
 LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)
 
