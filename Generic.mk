@@ -2,7 +2,7 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_STATIC_LIBRARIES := zlib
+LOCAL_LIBRARIES := zlib
 
 LOCAL_CFLAGS := -DPNG_NO_LIMITS_H
 
