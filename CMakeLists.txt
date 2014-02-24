@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.6)
 
 # Declare the project
-project(libpng)
+project(png)
 
 # set output path:
 set(LIBRARY_OUTPUT_PATH lib/${CMAKE_BUILD_TYPE})
@@ -26,6 +26,9 @@ set(src_files
 	png/wtran.c
 	png/wutil.c
 )
+
+add_definitions( -DDEBUG_LEVEL=3 )
+add_definitions( -DDEBUG=1 )
 
 #Create a static Lib:
 add_library(png STATIC ${src_files} )
