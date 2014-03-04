@@ -29,6 +29,15 @@ set(src_files
 
 add_definitions( -DDEBUG_LEVEL=3 )
 add_definitions( -DDEBUG=1 )
+if (UNIX)
+	add_definitions( -D__TARGET_OS__Linux )
+endif(UNIX)
+if (APPLE)
+	add_definitions( -D__TARGET_OS__MacOs )
+endif (APPLE)
+if (WIN32)
+	add_definitions( -D__TARGET_OS__Windows )
+endif (WIN32)
 
 #Create a static Lib:
 add_library(png STATIC ${src_files} )
