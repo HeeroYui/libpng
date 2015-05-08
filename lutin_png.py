@@ -1,6 +1,6 @@
 #!/usr/bin/python
-import lutinModule as module
-import lutinTools as tools
+import lutin.module as module
+import lutin.tools as tools
 
 def get_desc():
 	return "PNG : png file reader and writer"
@@ -28,7 +28,7 @@ def create(target):
 		'png/wtran.c',
 		'png/wutil.c'])
 	
-	myModule.compile_flags_CC([
+	myModule.compile_flags('c', [
 		'-DPNG_NO_LIMITS_H'])
 	
 	myModule.add_export_path(tools.get_current_path(__file__))
